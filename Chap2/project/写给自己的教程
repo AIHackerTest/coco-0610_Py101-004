@@ -1,0 +1,19 @@
+ch2:
+    ·如何选择一个合适的API
+     -如何使用requests模块来对API发送请求、传递参数、接受返回的数据
+    — 如何处理返回的数据，转换为Python中合适的数据类型
+    
+    步骤一：了解API的概念，用途，用法
+    步骤二：如何调用API上的数据
+       import requests 模块
+        requests.get()函数的用法
+        r.json()函数的作用
+    步骤三：如何利用API返回的数据
+    weather_dict{}的调用
+    步骤四：编写程序，实现功能
+     while True :
+        for * in *:
+        if else lop
+        print()函数
+       
+    

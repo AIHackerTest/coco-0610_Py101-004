@@ -1,0 +1,7 @@
+1 用read('filename')和open('filename')获取文件，还有建立函数读取文件如：def getWeather(file_path = "C:\\Users\\admin\\test\\weather_info.txt")；
+2 用split(',')来处理文件,rsprit删除空格，如：weather = info.split(',')[1].rstrip('\n')；
+3 字典建立，name[key]=data ，如weather_dic[city] = weather；
+4 while True无限循环，运行各种需求如：while True: order = input('请输入指令或您要查明的城市名：') if order in weather_dic.keys()；
+5 break quit（）中断循环,；
+6 for...in 用来判断 参数是否在字典中和列表中；
+7 open('weather_info.txt','r',encoding = 'utf-8') 处理中文文件,不然会报错

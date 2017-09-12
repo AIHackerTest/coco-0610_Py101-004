@@ -1,0 +1,44 @@
+# coding:utf-8
+"""
+ 猜数字游戏
+ 游戏规则：
+  -程序随便生成一个20以内的数字，用户有十次机会猜测
+  -程序根据用户输入，给予一定提示（大了、小了、正确）
+  -才对或用完十次机会，游戏结束
+"""
+"""
+ 实现思路：
+ 1.生成20以内的随机数字，random randint()
+ 2.用户输入，使用input，循环while或者for···in···
+ 3.==，>,<比较数字大小，条件语句，if else  else来实现结果输出
+ 4.break调出循环，或是让循环失效
+ 5.判断用户输入是不是数字。
+"""
+import random
+
+correct_num = random.randint(1,20) # 生成1~20 的随机数
+#print (correct_num)
+input_times = 10 #表示用户输入的机会次数
+
+while input_times > 0:
+    try:
+        guess_num = int(input('请输入你的数字：'))
+    except ValueError:
+        print('请确保你输入的是数字。')
+        continue
+        
+    #print(guess_num)
+    input_times -= 1
+    
+    if guess_num == correct_num:
+        print('答案正确，正确答案是{}'.format(correct_num))
+        break
+    elif guess_num > correct_num and guess_num <= 20:
+        print('大了')
+    elif guess_num < correct_num and guess_num >= 0:
+        print('小了')
+    else:
+        print('输入不正确，请输入1-20之间的数字。')
+        
+    if input_times >0:
+        print('你还有{}次输入机会。'.format(input_times))
